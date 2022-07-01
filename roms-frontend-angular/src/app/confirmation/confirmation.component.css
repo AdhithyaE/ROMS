@@ -1,0 +1,26 @@
+table{
+    background-color:black;
+    color: white;
+    margin-top: 10px;
+}
+.btn{
+    background-color: brown;
+}
+h1{
+    background-color:black;
+    background-size: 1000px;
+    color:white;
+    text-align:left;
+    /* margin-top: 20px; */
+
+}
+table, th, td {
+  border: .01px solid;
+}
+#total{
+    border: 1px solid;
+    color: red;
+  }
+  #message{
+    background-color: brown;
+}

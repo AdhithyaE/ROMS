@@ -1,0 +1,22 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <h2>Return Order Management</h2>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+    </ul>
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul> 
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>

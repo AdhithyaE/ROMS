@@ -1,0 +1,86 @@
+<div id="col" >
+  <main id="frm" class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+      <div  class="container">
+          <div class="row">
+              <div class="col-md-9">
+                  <div id="cl" class="card card-component">
+                      <h2 class="card-heading"><b>Create Return Request</b></h2>
+                      <!-- <form name="returnForm" method="post" th:action="@{/processReturnRequest}"> -->
+                      <form (ngSubmit)="saveRequest()" #requestForm="ngForm">
+                        <div class="row">
+                          <div class="alert alert-danger" *ngIf="errorMessage">
+                              Unable to process the request, please fill all the required fields to continue.
+                          </div>
+                          <!-- <div *ngIf="todoForm.dirty && targetDate.invalid" class="alert alert-info">
+                            <p th:text="${param.message}">Message</p>
+                        </div> -->
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="userName">Customer Name <span>*</span></label>
+                              <input type="text" #userName="ngModel"  [(ngModel)]="request.userName"
+                               name="userName" id="userName" class="form-control" 
+                                     placeholder="Ex: Joseph" required="required">
+                          </div>
+                          <div  class="form-group">
+                            <label for="contactNumber">Contact Number <span>*</span></label>
+                            <input type="tel" mask='(000) 000-0000' class="form-control" 
+                            #contactNumber="ngModel"  [(ngModel)]="request.contactNumber"
+                                   placeholder="Ex: 9999955555"
+                                   name="contactNumber" id="contactNumber"
+                                   required="required"/>
+                        </div>
+                        <div class="form-group">
+                          <label for="componentName">Component Name <span>*</span></label>
+                          <input type="text" class="form-control"
+                          #componentName="ngModel"  [(ngModel)]="request.componentName"
+                                 name="componentName" id="componentName"
+                                 placeholder="Ex: Laptop"
+                                 required="required">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="componentType">Select Component Type <span>*</span></label>
+                            <select class="form-control" name="componentType"
+                                    id="componentType" required="required"
+                                    #componentType="ngModel"  [(ngModel)]="request.componentType"
+                                    (ngModelChange)="checkHighPriority($event)">
+                                <option id="accessory" value="accessory">Accessory Component</option>
+                                <option id="integral" value="integral">Integral Component</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                          <div id="ifYes" style="display: none;">
+                              <label for="isPriorityRequest">Priority Request</label>
+                              <input type="checkbox" value="1"
+                              #isPriorityRequest="ngModel"  [(ngModel)]="request.isPriorityRequest"
+                                     id="isPriorityRequest"
+                                     name="isPriorityRequest">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="quantity">Quantity <span>*</span></label>
+                        <input type="text" class="form-control"
+                        #quantity="ngModel"  [(ngModel)]="request.quantity"
+                               name="quantity" id="quantity"
+                               placeholder="Ex: 1 , 10"
+                               required="required">
+                    </div>
+                    <button type="submit" class="btn btn-danger">Confirm Return</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
+  <div id="back" class="col-md-3 my-auto text-center text-white">
+    <div class="row align-items-center align-content-center">
+        <!-- <img src="../../order.png"
+             style="height: 35%; width: 65%;" alt="logo"/> -->
+    </div>
+    <h1><b>Welcome!</b></h1>
+    <p><b>Create a return request for your product.</b></p>
+</div>
+</div>
+</div>
+</main>
+</div>

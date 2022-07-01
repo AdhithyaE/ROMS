@@ -1,0 +1,22 @@
+#app {
+    background-color:whitesmoke;
+}
+
+h2{
+    font-size: 30px;
+    color: white;
+    display: block;
+  font-size: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+
+}
+
+ul li a {
+  color: white;
+  font-size: 18px;
+  }
+  

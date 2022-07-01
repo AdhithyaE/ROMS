@@ -1,0 +1,23 @@
+server:
+  port: 8086
+  error:
+    include-stacktrace: never
+
+spring:
+  application:
+    name: packaging-and-delivery-service
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:packagingDb
+    driver-class-name: org.h2.Driver
+
+logging:
+  level:
+    org:
+      springframework : debug
+  file: 
+   path: /
+   name: log.txt
+ 

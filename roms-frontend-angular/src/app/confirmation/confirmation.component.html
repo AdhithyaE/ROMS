@@ -1,0 +1,47 @@
+
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+        <div  id="form" class="card card-component">
+  <table class="table">
+    <h1> Your Order Info </h1>
+    <tr>
+      <th>Order Request Id</th>
+      <td>{{requestId}}</td>
+  </tr>
+    <tr>
+      <th>UserName</th>
+      <td>{{name}}</td>
+  </tr>
+    <tr>
+      <th>Estimated Delivery Date</th>
+      <td>{{dateOfDelivery}}</td>
+  </tr>
+   <tr>
+    <th>Packaging and Delivery Charge</th>
+    <td>{{packageAndDeliveryCharge}}</td>
+   </tr>
+   <tr>
+    <th>Processing Charge</th>
+    <td>{{processingCharge}}</td>
+   </tr>
+   <tr id="total">
+    <th >Total Charge</th>
+    <td >{{total}}</td>
+   </tr>
+    
+
+  </table>
+
+  <div class="row">
+      <button (click)="addRequest()" class="btn btn-success">Confirm Return Request</button>
+  </div>
+</div>
+</div>
+<div id='message' class="col-md-3 my-auto text-center text-white">
+    <h2><b>Verify & Proceed</b></h2>
+    <p><b>Please verify your order info.</b></p>
+</div>
+</div>
