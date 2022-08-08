@@ -6,6 +6,8 @@ A leading Supply chain Management Organization wants to automate the return orde
 by classifying them to repair or replacement. Repair is for all main or integral part of their product.
 Replacement is for accessories.
 
+![image](https://user-images.githubusercontent.com/32799999/183387104-c265445e-fe42-4a82-a480-099e8db72360.png)
+
 Client Portal Requirements
 
 o Return Portal must allow a member to Login. Once successfully logged in, the member do
